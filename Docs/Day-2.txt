@@ -1,0 +1,55 @@
+Recap: 
+    1. Microservices
+    2. Principles of MS 
+    3. Ecosystem of MS 
+        1. LB 
+        2. SD 
+        3. API GW 
+        4. Caching 
+        5. Messaging queues -> SYnc-Async 
+        6. Oracastrations - k8s
+        7. SCM 
+        8. Sonarqube 
+        9. CI/CD
+        10. IAC 
+        11. service mesh
+        12. containerizing
+    4. DevOps [Github Actions]
+        1. CI 
+        2. CD 
+
+
+# interpolation
+secrets:
+    password: P@ssw0rd
+variables:
+    dbname: tododb
+
+---
+
+dbname: $(variables.dbname) 
+password: {{ secrets.password }} 
+age: 12
+isAlive: true
+address: 
+  doorno: 12
+  street: xyz
+  pincode: 560075
+phone: 
+  - no: 8989898889
+    type: work
+  - no: 234324 
+    type: home
+feedback: |
+  klajdflkajdslfkjadslkfjasdlkflkasdf asdlfk;ladsfkl;asfljdsaf
+  lkajsdflkajflasdjfljflajflajdflkj adfasdfadfasdf 
+
+---
+
+vm1     -|
+vm2     -|  public ip -> docker repo -> rate limit -> 
+
+docker pull pravat09/todoapp
+docker run -p 8080:8081 pravat09/todoapp
+
+http://localhost:8080/swagger-ui/index.html

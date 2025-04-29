@@ -1,0 +1,45 @@
+
+CI  -> SC -> SCM -> CI/CD tool, Githhub actions, jenkins,codefresh,azure devops pipeline
+    build system -> agent, workspace
+    1. download code
+    2. set prerequisites -> sdk 
+    3. dependencies -> mvn repo -> download 
+        3a. clean code status
+        3b. formatinf of the code 
+    4. build application -> mvn
+    5. unit test cases -> passed
+    6. release of a application 
+        1. -> release jar
+        2. containerizing it 
+    7. push to artifactory: repository of executable 
+        1. jfrog, github relase, azure artifactory 
+        2. docker hub, ACR, GCR, Harbor 
+
+CD -> 
+    1. release 
+        1. executable  
+        2. image 
+    2. environment:
+        1. static 
+            1. dev laptop -> 
+            2. data center ->
+        2. dynamic 
+            1. cloud
+            2. orcastrator - k8s 
+                1. desktop [Docker desktop]
+                2. cloud [AKS,GKE,EKS]
+        3. deploy
+            1. dev -> laptop 
+            2. QA -> 
+                create n  number of instance and test the application
+                integration 
+                perfromace 
+            3. UAT 
+                environment -> private network
+                manual promotion of the release to production
+            4. Production 
+                public network 
+        4. observability
+            1. splunk 
+            2. service mesh 
+            
